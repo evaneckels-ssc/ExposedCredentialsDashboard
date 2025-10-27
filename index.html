@@ -131,6 +131,183 @@
             font-size: 18px;
         }
 
+        .help-button {
+            padding: 8px 10px;
+            min-width: auto;
+        }
+
+        .help-button svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* Help Modal Specific Styles */
+        .help-modal-content {
+            width: 750px;
+            max-width: 90vw;
+            max-height: 85vh;
+            overflow-y: auto;
+        }
+
+        .help-modal-body {
+            max-height: calc(85vh - 140px);
+            overflow-y: auto;
+            padding: 24px;
+        }
+
+        .help-section {
+            margin-bottom: 32px;
+        }
+
+        .help-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .help-section h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #231f20;
+            margin: 0 0 14px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .help-section p {
+            margin: 0 0 14px 0;
+            line-height: 1.7;
+            color: #636466;
+            font-size: 14px;
+        }
+
+        .help-section ul {
+            margin: 0 0 14px 0;
+            padding-left: 24px;
+            list-style-type: disc;
+        }
+
+        .help-section li {
+            margin-bottom: 10px;
+            line-height: 1.7;
+            color: #636466;
+            font-size: 14px;
+        }
+
+        .help-section code {
+            background-color: #f8f9fa;
+            padding: 3px 7px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            color: #594ef3;
+            font-weight: 500;
+        }
+
+        .workflow-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .workflow-step {
+            display: flex;
+            gap: 18px;
+            align-items: flex-start;
+        }
+
+        .step-number {
+            flex-shrink: 0;
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, #594ef3 0%, #512b70 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 17px;
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step-content h4 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #231f20;
+            margin: 0 0 8px 0;
+        }
+
+        .step-content p {
+            margin: 0 0 10px 0;
+            line-height: 1.7;
+            color: #636466;
+        }
+
+        .step-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            margin-top: 16px;
+        }
+
+        .feature-item {
+            padding: 18px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            border: 1px solid #e3e3e3;
+        }
+
+        .feature-item strong {
+            display: block;
+            margin-bottom: 8px;
+            color: #231f20;
+            font-size: 15px;
+        }
+
+        .feature-item p {
+            margin: 0;
+            font-size: 13px;
+            color: #636466;
+            line-height: 1.6;
+        }
+
+        .example-box {
+            background-color: #f8f9fa;
+            border-left: 4px solid #594ef3;
+            padding: 22px;
+            border-radius: 6px;
+            margin-top: 16px;
+        }
+
+        .example-box p {
+            margin: 0 0 14px 0;
+            font-weight: 600;
+            color: #231f20;
+            font-size: 15px;
+        }
+
+        .example-box ol {
+            margin: 0;
+            padding-left: 24px;
+        }
+
+        .example-box li {
+            margin-bottom: 10px;
+            line-height: 1.7;
+            color: #636466;
+        }
+
+        .example-box li:last-child {
+            margin-bottom: 0;
+        }
+
         /* Filter Bar */
         .filter-controls {
             display: flex;
@@ -1191,6 +1368,213 @@
         </div>
     </div>
 
+    <!-- Global View Help Modal -->
+    <div id="globalHelpModal" class="modal">
+        <div class="modal-content help-modal-content">
+            <div class="modal-header">
+                <h2>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#594ef3"><path d="M478-240q21 0 35.5-14.5T528-290q0-21-14.5-35.5T478-340q-21 0-35.5 14.5T428-290q0 21 14.5 35.5T478-240Zm-36-154h74q0-33 7.5-52t42.5-52q26-26 41-49.5t15-56.5q0-56-41-86t-97-30q-57 0-92.5 30T342-618l66 26q5-18 22.5-39t53.5-21q32 0 48 17.5t16 38.5q0 20-12 37.5T506-526q-44 39-54 59t-10 73Zm38 314q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg>
+                    Global View Help
+                </h2>
+                <button class="modal-close" id="closeGlobalHelpModal">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+            <div class="modal-body help-modal-body">
+                <section class="help-section">
+                    <h3>What is Global View?</h3>
+                    <p>Global View helps you discover <strong>where YOUR organization's credentials are exposed across the entire internet</strong>. Use this mode for first-party risk assessment to identify all breach sources affecting your employees.</p>
+                </section>
+
+                <section class="help-section">
+                    <h3>When to Use Global View</h3>
+                    <ul>
+                        <li><strong>Proactive Security:</strong> Discover all sites where your employee credentials have been leaked</li>
+                        <li><strong>Incident Response:</strong> Quickly assess the full scope of a credential compromise</li>
+                        <li><strong>Risk Assessment:</strong> Understand your organization's overall credential exposure</li>
+                        <li><strong>Remediation Planning:</strong> Export data for password reset campaigns</li>
+                    </ul>
+                </section>
+
+                <section class="help-section">
+                    <h3>Three-Panel Workflow</h3>
+                    <div class="workflow-steps">
+                        <div class="workflow-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Breached Domains (Left Panel)</h4>
+                                <p>Enter your organization's domain (e.g., <code>mycompany.com</code>) and click <strong>Search</strong>.</p>
+                                <p>View all external sites/domains where your credentials were leaked. Each site shows the number of affected subdomains and total exposed credentials.</p>
+                            </div>
+                        </div>
+                        <div class="workflow-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Subdomains (Center Panel)</h4>
+                                <p>Click any breached domain to see its subdomains containing your credentials.</p>
+                                <p>Use the <strong>"Use Parent Domain"</strong> checkbox to view credentials for the main domain itself.</p>
+                            </div>
+                        </div>
+                        <div class="workflow-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Credentials (Right Panel)</h4>
+                                <p>Click any subdomain to see the actual exposed credentials (email/username, password, leak date, source).</p>
+                                <p>Export to CSV/JSON for remediation. Use the <strong>"Exclude Subdomains"</strong> toggle to filter results.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="help-section">
+                    <h3>Key Features</h3>
+                    <div class="feature-grid">
+                        <div class="feature-item">
+                            <strong>Date Filtering</strong>
+                            <p>Focus on recent leaks using Date From/To filters</p>
+                        </div>
+                        <div class="feature-item">
+                            <strong>Exclude Subdomains</strong>
+                            <p>Toggle to show only exact domain matches</p>
+                        </div>
+                        <div class="feature-item">
+                            <strong>Pagination</strong>
+                            <p>Navigate through large datasets with adjustable page sizes</p>
+                        </div>
+                        <div class="feature-item">
+                            <strong>Export Options</strong>
+                            <p>Download CSV or JSON for analysis and remediation</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="help-section">
+                    <h3>Example Use Case</h3>
+                    <div class="example-box">
+                        <ol>
+                            <li>Enter: <code>mycompany.com</code></li>
+                            <li>See: 15 breached sites found (google.com, microsoft.com, etc.)</li>
+                            <li>Click: <code>google.com</code></li>
+                            <li>See: 8 subdomains (firebase.com, gmail.com, etc.)</li>
+                            <li>Click: <code>firebase.com</code></li>
+                            <li>See: 23 employee credentials leaked from various breaches</li>
+                            <li>Export: CSV for IT team to coordinate password resets</li>
+                        </ol>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search View Help Modal -->
+    <div id="searchHelpModal" class="modal">
+        <div class="modal-content help-modal-content">
+            <div class="modal-header">
+                <h2>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#594ef3"><path d="M478-240q21 0 35.5-14.5T528-290q0-21-14.5-35.5T478-340q-21 0-35.5 14.5T428-290q0 21 14.5 35.5T478-240Zm-36-154h74q0-33 7.5-52t42.5-52q26-26 41-49.5t15-56.5q0-56-41-86t-97-30q-57 0-92.5 30T342-618l66 26q5-18 22.5-39t53.5-21q32 0 48 17.5t16 38.5q0 20-12 37.5T506-526q-44 39-54 59t-10 73Zm38 314q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg>
+                    Search View Help
+                </h2>
+                <button class="modal-close" id="closeSearchHelpModal">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+            <div class="modal-body help-modal-body">
+                <section class="help-section">
+                    <h3>What is Search View?</h3>
+                    <p>Search View enables <strong>targeted investigation of specific domains</strong> to find credentials from your organization and vendors. Use this mode for third-party risk assessment and focused security investigations.</p>
+                </section>
+
+                <section class="help-section">
+                    <h3>When to Use Search View</h3>
+                    <ul>
+                        <li><strong>Vendor Risk Assessment:</strong> Investigate if your vendors' credentials are exposed on critical platforms</li>
+                        <li><strong>Supply Chain Security:</strong> Monitor multiple third-party organizations simultaneously</li>
+                        <li><strong>Targeted Investigation:</strong> Focus on a specific service or platform (e.g., Salesforce, Office 365)</li>
+                        <li><strong>Security Reviews:</strong> Gather evidence for vendor security assessments</li>
+                    </ul>
+                </section>
+
+                <section class="help-section">
+                    <h3>Two-Panel Workflow</h3>
+                    <div class="workflow-steps">
+                        <div class="workflow-step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Setup Your Search</h4>
+                                <p><strong>Target Domain:</strong> Enter the domain you want to investigate (e.g., <code>salesforce.com</code>)</p>
+                                <p><strong>Credential Owner(s):</strong> Click to add one or more domains whose credentials you want to find (e.g., <code>mycompany.com, vendor1.com, vendor2.com</code>)</p>
+                                <p>Click <strong>Search</strong> to run the investigation.</p>
+                            </div>
+                        </div>
+                        <div class="workflow-step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Subdomains (Left Panel)</h4>
+                                <p>View all subdomains of your target domain that contain credentials from your specified owners.</p>
+                                <p>Use the <strong>"Use Parent Domain"</strong> checkbox to view credentials for the main domain itself.</p>
+                            </div>
+                        </div>
+                        <div class="workflow-step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Credentials (Right Panel)</h4>
+                                <p>Click any subdomain to see exposed credentials from ALL specified credential owners.</p>
+                                <p>Export to CSV/JSON for reporting and remediation.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="help-section">
+                    <h3>Key Features</h3>
+                    <div class="feature-grid">
+                        <div class="feature-item">
+                            <strong>Multiple Owners</strong>
+                            <p>Search for credentials from multiple organizations at once</p>
+                        </div>
+                        <div class="feature-item">
+                            <strong>Date Filtering</strong>
+                            <p>Focus on specific time periods</p>
+                        </div>
+                        <div class="feature-item">
+                            <strong>Exclude Subdomains</strong>
+                            <p>Toggle to show only exact domain matches</p>
+                        </div>
+                        <div class="feature-item">
+                            <strong>Export Options</strong>
+                            <p>Download CSV or JSON for analysis</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="help-section">
+                    <h3>Example Use Case</h3>
+                    <div class="example-box">
+                        <p><strong>Scenario:</strong> Vendor security assessment</p>
+                        <ol>
+                            <li>Target: <code>salesforce.com</code></li>
+                            <li>Credential Owners: <code>mycompany.com, criticalvendor.com, vendor3.com</code></li>
+                            <li>See: 12 subdomains on salesforce.com with credentials</li>
+                            <li>Click: <code>login.salesforce.com</code></li>
+                            <li>See: 15 credentials total (8 from mycompany.com, 5 from criticalvendor.com, 2 from vendor3.com)</li>
+                            <li>Export: Evidence for vendor security review and risk scoring</li>
+                        </ol>
+                    </div>
+                </section>
+
+                <section class="help-section">
+                    <h3>Tips & Best Practices</h3>
+                    <ul>
+                        <li>Use comma-separated or newline-separated domains in the Credential Owner(s) modal</li>
+                        <li>Compare credential exposure across multiple vendors to identify highest-risk partners</li>
+                        <li>Export results to support vendor risk scoring and security requirements</li>
+                        <li>Combine with date filters to track improvement or deterioration over time</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </div>
+
     <!-- Header -->
     <div class="header">
         <div class="header-row">
@@ -1247,6 +1631,9 @@
                 <button class="header-button" id="addApiKeyBtn">
                     <span class="material-symbols-outlined">key</span>
                     Add API Key
+                </button>
+                <button class="header-button help-button" id="helpBtn" title="View Help">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="currentColor"><path d="M478-240q21 0 35.5-14.5T528-290q0-21-14.5-35.5T478-340q-21 0-35.5 14.5T428-290q0 21 14.5 35.5T478-240Zm-36-154h74q0-33 7.5-52t42.5-52q26-26 41-49.5t15-56.5q0-56-41-86t-97-30q-57 0-92.5 30T342-618l66 26q5-18 22.5-39t53.5-21q32 0 48 17.5t16 38.5q0 20-12 37.5T506-526q-44 39-54 59t-10 73Zm38 314q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg>
                 </button>
             </div>
         </div>
@@ -1503,7 +1890,7 @@
         let credentialsData = [];
         let filteredCredentialsData = [];
         let credentialsCurrentPage = 1;
-        let credentialsPageSize = 100;
+        let credentialsPageSize = 500;
         let excludeSubdomains = false;
         
         // Filters
@@ -1655,6 +2042,25 @@
             
             updateOwnersButtonText();
             document.getElementById('credentialOwnersModal').style.display = 'none';
+        });
+
+        // Help Button - Shows appropriate modal based on current mode
+        document.getElementById('helpBtn').addEventListener('click', () => {
+            if (currentMode === 'global') {
+                document.getElementById('globalHelpModal').style.display = 'flex';
+            } else {
+                document.getElementById('searchHelpModal').style.display = 'flex';
+            }
+        });
+
+        // Close Global Help Modal
+        document.getElementById('closeGlobalHelpModal').addEventListener('click', () => {
+            document.getElementById('globalHelpModal').style.display = 'none';
+        });
+
+        // Close Search Help Modal
+        document.getElementById('closeSearchHelpModal').addEventListener('click', () => {
+            document.getElementById('searchHelpModal').style.display = 'none';
         });
 
         function updateOwnersPreview() {
@@ -1956,6 +2362,413 @@
                 if (dateFrom) url += `&date_from=${dateFrom}`;
                 if (dateTo) url += `&date_to=${dateTo}`;
                 
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': `Token ${apiKey}`,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        credential_owner_domains: owners,
+                        exclude_subdomains: excludeSubdomains
+                    })
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`API Error: ${response.status} ${response.statusText}`);
+                }
+                
+                const data = await response.json();
+                credentialsData = data.entries || [];
+                filteredCredentialsData = [...credentialsData];
+                
+                // Update stats
+                document.getElementById('totalCredentials').textContent = (data.total || 0).toLocaleString();
+                
+                // Show footer
+                document.getElementById('credentialFooter').style.display = 'flex';
+                
+                renderCredentials();
+                
+                // Show/hide pagination
+                if (data.total > credentialsPageSize) {
+                    document.getElementById('credentialsPagination').style.display = 'flex';
+                    updateCredentialsPagination(data.total);
+                } else {
+                    document.getElementById('credentialsPagination').style.display = 'none';
+                }
+                
+            } catch (error) {
+                console.error('Error loading credentials:', error);
+                content.innerHTML = `<div class="empty-state"><span class="material-symbols-outlined">error</span><div class="empty-state-text">Error loading data: ${error.message}</div></div>`;
+                alert(`Error loading data: ${error.message}`);
+            }
+        }
+
+        function renderCredentials() {
+            const content = document.getElementById('detailContent');
+            
+            if (filteredCredentialsData.length === 0) {
+                content.innerHTML = '<div class="empty-state"><span class="material-symbols-outlined">search_off</span><div class="empty-state-text">No credentials found</div></div>';
+                return;
+            }
+            
+            const tableHtml = `
+                <table class="credentials-table">
+                    <thead>
+                        <tr>
+                            <th>Email/Username</th>
+                            <th>Source</th>
+                            <th>Channel</th>
+                            <th>Leak Date</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${filteredCredentialsData.map((cred, index) => `
+                            <tr>
+                                <td>${escapeHtml(cred.email || cred.username || 'N/A')}</td>
+                                <td>
+                                    <span class="source-badge source-${getSourceClass(cred.source_type)}">
+                                        ${escapeHtml(cred.source_type || 'Unknown')}
+                                    </span>
+                                </td>
+                                <td>${escapeHtml(cred.channel_title || 'N/A')}</td>
+                                <td>${formatDate(cred.leak_date)}</td>
+                                <td>
+                                    <button class="view-json-btn" data-index="${index}">View JSON</button>
+                                </td>
+                            </tr>
+                        `).join('')}
+                    </tbody>
+                </table>
+            `;
+            
+            content.innerHTML = tableHtml;
+            
+            // Add click handlers for JSON view
+            document.querySelectorAll('.view-json-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const index = parseInt(btn.dataset.index);
+                    viewCredentialJson(filteredCredentialsData[index]);
+                });
+            });
+        }
+
+        // Exclude Subdomains Toggle
+        document.getElementById('excludeSubdomainsToggle').addEventListener('change', async (e) => {
+            excludeSubdomains = e.target.checked;
+            // Reload credentials with new exclude_subdomains setting
+            if (selectedSubdomain) {
+                const owners = currentMode === 'global' ? [credentialOwnerDomain] : credentialOwners;
+                credentialsCurrentPage = 1; // Reset to page 1
+                await loadCredentials(selectedSubdomain, owners);
+            }
+        });
+
+        // Search Filters
+        document.getElementById('breachedSitesSearch').addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase();
+            filteredGlobalData = globalSummaryData.filter(item => 
+                item.domain.toLowerCase().includes(query)
+            );
+            renderGlobalSummary();
+        });
+
+        document.getElementById('subdomainsSearch').addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase();
+            filteredParentData = parentDomainsData.filter(item => 
+                item.domain.toLowerCase().includes(query)
+            );
+            renderParentDomains();
+        });
+
+        document.getElementById('credentialsSearch').addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase();
+            filteredCredentialsData = credentialsData.filter(cred => 
+                (cred.email && cred.email.toLowerCase().includes(query)) ||
+                (cred.username && cred.username.toLowerCase().includes(query)) ||
+                (cred.source_type && cred.source_type.toLowerCase().includes(query))
+            );
+            renderCredentials();
+        });
+
+        // Pagination
+        function updateGlobalPagination(total) {
+            const totalPages = Math.ceil(total / globalPageSize);
+            document.getElementById('globalPageInfo').textContent = `Page ${globalCurrentPage} of ${totalPages}`;
+            document.getElementById('globalPrevBtn').disabled = globalCurrentPage === 1;
+            document.getElementById('globalNextBtn').disabled = globalCurrentPage === totalPages;
+        }
+
+        function updateParentPagination(total) {
+            const totalPages = Math.ceil(total / parentPageSize);
+            document.getElementById('parentPageInfo').textContent = `Page ${parentCurrentPage} of ${totalPages}`;
+            document.getElementById('parentPrevBtn').disabled = parentCurrentPage === 1;
+            document.getElementById('parentNextBtn').disabled = parentCurrentPage === totalPages;
+        }
+
+        function updateCredentialsPagination(total) {
+            const totalPages = Math.ceil(total / credentialsPageSize);
+            document.getElementById('credentialsPageInfo').textContent = `Page ${credentialsCurrentPage} of ${totalPages}`;
+            document.getElementById('credentialsPrevBtn').disabled = credentialsCurrentPage === 1;
+            document.getElementById('credentialsNextBtn').disabled = credentialsCurrentPage === totalPages;
+        }
+
+        document.getElementById('globalPrevBtn').addEventListener('click', () => {
+            if (globalCurrentPage > 1) {
+                globalCurrentPage--;
+                loadGlobalSummary();
+            }
+        });
+
+        document.getElementById('globalNextBtn').addEventListener('click', () => {
+            globalCurrentPage++;
+            loadGlobalSummary();
+        });
+
+        document.getElementById('parentPrevBtn').addEventListener('click', () => {
+            if (parentCurrentPage > 1) {
+                parentCurrentPage--;
+                const owners = currentMode === 'global' ? [credentialOwnerDomain] : credentialOwners;
+                loadParentDomains(currentMode === 'global' ? selectedTargetDomain : targetDomain, owners);
+            }
+        });
+
+        document.getElementById('parentNextBtn').addEventListener('click', () => {
+            parentCurrentPage++;
+            const owners = currentMode === 'global' ? [credentialOwnerDomain] : credentialOwners;
+            loadParentDomains(currentMode === 'global' ? selectedTargetDomain : targetDomain, owners);
+        });
+
+        // Use Parent Domain Toggle
+        document.getElementById('useParentDomainToggle').addEventListener('change', async (e) => {
+            const isChecked = e.target.checked;
+            
+            if (isChecked) {
+                const parentDomain = currentMode === 'global' ? selectedTargetDomain : targetDomain;
+                if (!parentDomain) {
+                    e.target.checked = false;
+                    return;
+                }
+                
+                // Deselect all subdomain items
+                document.querySelectorAll('.sidebar-center .sidebar-item').forEach(el => el.classList.remove('selected'));
+                
+                useParentDomainSelected = true;
+                
+                const owners = currentMode === 'global' ? [credentialOwnerDomain] : credentialOwners;
+                await loadCredentials(parentDomain, owners);
+            } else {
+                // If unchecked, clear the credentials view
+                useParentDomainSelected = false;
+                resetDetailView();
+            }
+        });
+
+        document.getElementById('credentialsPrevBtn').addEventListener('click', () => {
+            if (credentialsCurrentPage > 1) {
+                credentialsCurrentPage--;
+                const owners = currentMode === 'global' ? [credentialOwnerDomain] : credentialOwners;
+                loadCredentials(selectedSubdomain, owners);
+            }
+        });
+
+        document.getElementById('credentialsNextBtn').addEventListener('click', () => {
+            credentialsCurrentPage++;
+            const owners = currentMode === 'global' ? [credentialOwnerDomain] : credentialOwners;
+            loadCredentials(selectedSubdomain, owners);
+        });
+
+        // Page Size Selectors
+        document.getElementById('globalPageSizeSelect').addEventListener('change', (e) => {
+            globalPageSize = parseInt(e.target.value);
+            globalCurrentPage = 1; // Reset to page 1
+            if (credentialOwnerDomain && apiKey) {
+                loadGlobalSummary();
+            }
+        });
+
+        document.getElementById('parentPageSizeSelect').addEventListener('change', (e) => {
+            parentPageSize = parseInt(e.target.value);
+            parentCurrentPage = 1; // Reset to page 1
+            const owners = currentMode === 'global' ? [credentialOwnerDomain] : credentialOwners;
+            const target = currentMode === 'global' ? selectedTargetDomain : targetDomain;
+            if (target && owners.length > 0 && apiKey) {
+                loadParentDomains(target, owners);
+            }
+        });
+
+        document.getElementById('credentialsPageSizeSelect').addEventListener('change', (e) => {
+            credentialsPageSize = parseInt(e.target.value);
+            credentialsCurrentPage = 1; // Reset to page 1
+            const owners = currentMode === 'global' ? [credentialOwnerDomain] : credentialOwners;
+            if (selectedSubdomain && apiKey) {
+                loadCredentials(selectedSubdomain, owners);
+            }
+        });
+
+        // JSON Modal
+        function viewCredentialJson(credential) {
+            document.getElementById('jsonContent').textContent = JSON.stringify(credential, null, 2);
+            document.getElementById('jsonModal').style.display = 'flex';
+        }
+
+        document.getElementById('closeJsonModal').addEventListener('click', () => {
+            document.getElementById('jsonModal').style.display = 'none';
+        });
+
+        document.getElementById('copyJsonBtn').addEventListener('click', () => {
+            const jsonText = document.getElementById('jsonContent').textContent;
+            navigator.clipboard.writeText(jsonText).then(() => {
+                alert('JSON copied to clipboard!');
+            });
+        });
+
+        // Export Functions
+        document.getElementById('exportCsvBtn').addEventListener('click', () => {
+            if (filteredCredentialsData.length === 0) {
+                alert('No data to export');
+                return;
+            }
+            exportToCsv();
+        });
+
+        document.getElementById('exportJsonBtn').addEventListener('click', () => {
+            if (filteredCredentialsData.length === 0) {
+                alert('No data to export');
+                return;
+            }
+            exportToJson();
+        });
+
+        function exportToCsv() {
+            const headers = ['Email/Username', 'Password', 'Domain', 'Source Type', 'Channel Title', 'Filename', 'Leak Date', 'Processed Date'];
+            const rows = filteredCredentialsData.map(cred => [
+                cred.email || cred.username || '',
+                cred.password || '',
+                cred.leaked_on_domain || cred.domain || '',
+                cred.source_type || '',
+                cred.channel_title || '',
+                cred.filename || '',
+                cred.leak_date || '',
+                cred.processed_date || ''
+            ]);
+            
+            let csvContent = '\uFEFF'; // UTF-8 BOM
+            csvContent += headers.map(h => escapeCsvField(h)).join(',') + '\n';
+            csvContent += rows.map(row => row.map(field => escapeCsvField(field)).join(',')).join('\n');
+            
+            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement('a');
+            const url = URL.createObjectURL(blob);
+            link.setAttribute('href', url);
+            link.setAttribute('download', `exposed-credentials-${selectedSubdomain || 'export'}-${formatDateForFilename(new Date())}.csv`);
+            link.style.visibility = 'hidden';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        function exportToJson() {
+            const jsonContent = JSON.stringify({
+                total: filteredCredentialsData.length,
+                subdomain: selectedSubdomain,
+                exported_at: new Date().toISOString(),
+                entries: filteredCredentialsData
+            }, null, 2);
+            
+            const blob = new Blob([jsonContent], { type: 'application/json' });
+            const link = document.createElement('a');
+            const url = URL.createObjectURL(blob);
+            link.setAttribute('href', url);
+            link.setAttribute('download', `exposed-credentials-${selectedSubdomain || 'export'}-${formatDateForFilename(new Date())}.json`);
+            link.style.visibility = 'hidden';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        // Utility Functions
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        function escapeCsvField(field) {
+            const str = String(field);
+            if (str.includes(',') || str.includes('"') || str.includes('\n') || str.includes('\r')) {
+                return '"' + str.replace(/"/g, '""') + '"';
+            }
+            return str;
+        }
+
+        function formatDate(dateString) {
+            if (!dateString) return 'N/A';
+            try {
+                const date = new Date(dateString);
+                return date.toLocaleDateString() + ' ' + date.toLocaleTimeString();
+            } catch {
+                return dateString;
+            }
+        }
+
+        function formatDateForFilename(date) {
+            const year = date.getFullYear();
+            const month = String(date.getMonth() + 1).padStart(2, '0');
+            const day = String(date.getDate()).padStart(2, '0');
+            return `${year}-${month}-${day}`;
+        }
+
+        function getSourceClass(sourceType) {
+            if (!sourceType) return 'other';
+            const type = sourceType.toLowerCase();
+            if (type.includes('telegram')) return 'telegram';
+            if (type.includes('discord')) return 'discord';
+            return 'other';
+        }
+
+        function resetParentView() {
+            document.getElementById('subdomainsList').innerHTML = '<div class="empty-state"><span class="material-symbols-outlined">arrow_back</span><div class="empty-state-text" id="subdomainsEmptyText"><span class="global-mode-text">Select a breached domain from the left</span><span class="search-mode-text hidden">Enter target and credential owners, then click Search</span></div></div>';
+            document.getElementById('parentSubtitle').textContent = '—';
+            document.getElementById('parentFooter').style.display = 'none';
+            document.getElementById('subdomainsSearch').value = '';
+            document.getElementById('totalSubdomains').textContent = '—';
+            document.getElementById('useParentDomainToggle').checked = false;
+            useParentDomainSelected = false;
+            parentDomainsData = [];
+            filteredParentData = [];
+            selectedTargetDomain = null;
+            parentCurrentPage = 1;
+        }
+
+        function resetDetailView() {
+            document.getElementById('detailContent').innerHTML = '<div class="empty-state"><span class="material-symbols-outlined">arrow_back</span><div class="empty-state-text">Select a subdomain to view credentials</div></div>';
+            document.getElementById('detailSubtitle').textContent = '—';
+            document.getElementById('credentialFooter').style.display = 'none';
+            document.getElementById('credentialsSearch').value = '';
+            document.getElementById('totalCredentials').textContent = '—';
+            credentialsData = [];
+            filteredCredentialsData = [];
+            selectedSubdomain = null;
+            credentialsCurrentPage = 1;
+        }
+
+        // Show API key modal on load if no key
+        window.addEventListener('load', () => {
+            if (!apiKey) {
+                setTimeout(() => {
+                    document.getElementById('apiKeyModal').style.display = 'flex';
+                }, 500);
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
                 const response = await fetch(url, {
                     method: 'POST',
                     headers: {
