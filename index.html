@@ -334,6 +334,31 @@
             gap: 6px;
         }
 
+        .parent-domain-toggle {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            color: #636466;
+            cursor: pointer;
+            padding: 8px 12px;
+            border-radius: 6px;
+            border: 1px solid #bccbcb;
+            transition: all 0.2s ease;
+            background: white;
+            margin-bottom: 8px;
+        }
+
+        .parent-domain-toggle:hover {
+            border-color: #594ef3;
+            background-color: #f8f7ff;
+        }
+
+        .parent-domain-toggle input[type="checkbox"] {
+            margin: 0;
+            accent-color: #594ef3;
+        }
+
         .stat-item {
             display: flex;
             justify-content: space-between;
@@ -432,6 +457,12 @@
             font-size: 16px;
             color: #594ef3;
             font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+        }
+
+        .item-badge svg {
+            width: 16px;
+            height: 16px;
+            fill: #594ef3;
         }
 
         .item-badge strong {
@@ -1244,7 +1275,7 @@
                     <div class="filter-group">
                         <label class="filter-label">Target Domain</label>
                         <div class="filter-input-wrapper">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M440-40v-80q-125-14-214.5-103.5T122-438H42v-80h80q14-125 103.5-214.5T440-836v-80h80v80q125 14 214.5 103.5T838-518h80v80h-80q-14 125-103.5 214.5T520-120v80h-80Zm40-158q116 0 198-82t82-198q0-116-82-198t-198-82q-116 0-198 82t-82 198q0 116 82 198t198 82Z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M440-42v-80q-125-14-214.5-103.5T122-440H42v-80h80q14-125 103.5-214.5T440-838v-80h80v80q125 14 214.5 103.5T838-520h80v80h-80q-14 125-103.5 214.5T520-122v80h-80Zm40-158q116 0 198-82t82-198q0-116-82-198t-198-82q-116 0-198 82t-82 198q0 116 82 198t198 82Zm0-120q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm0-80q33 0 56.5-23.5T560-480q0-33-23.5-56.5T480-560q-33 0-56.5 23.5T400-480q0 33 23.5 56.5T480-400Zm0-80Z"/></svg>
                             <input type="text" id="targetDomainInput" placeholder="e.g., google.com">
                         </div>
                     </div>
@@ -1278,7 +1309,7 @@
         <div class="sidebar-left">
             <div class="sidebar-header">
                 <div class="sidebar-title">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M440-40v-80q-125-14-214.5-103.5T122-438H42v-80h80q14-125 103.5-214.5T440-836v-80h80v80q125 14 214.5 103.5T838-518h80v80h-80q-14 125-103.5 214.5T520-120v80h-80Zm40-158q116 0 198-82t82-198q0-116-82-198t-198-82q-116 0-198 82t-82 198q0 116 82 198t198 82Z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M440-42v-80q-125-14-214.5-103.5T122-440H42v-80h80q14-125 103.5-214.5T440-838v-80h80v80q125 14 214.5 103.5T838-520h80v80h-80q-14 125-103.5 214.5T520-122v80h-80Zm40-158q116 0 198-82t82-198q0-116-82-198t-198-82q-116 0-198 82t-82 198q0 116 82 198t198 82Zm0-120q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm0-80q33 0 56.5-23.5T560-480q0-33-23.5-56.5T480-560q-33 0-56.5 23.5T400-480q0 33 23.5 56.5T480-400Zm0-80Z"/></svg>
                     Breached Domains
                 </div>
                 <div class="sidebar-subtitle" id="globalSubtitle">—</div>
@@ -1328,7 +1359,7 @@
         <div class="sidebar-center">
             <div class="sidebar-header">
                 <div class="sidebar-title">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M440-40v-80q-125-14-214.5-103.5T122-438H42v-80h80q14-125 103.5-214.5T440-836v-80h80v80q125 14 214.5 103.5T838-518h80v80h-80q-14 125-103.5 214.5T520-120v80h-80Zm40-158q116 0 198-82t82-198q0-116-82-198t-198-82q-116 0-198 82t-82 198q0 116 82 198t198 82Z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M440-42v-80q-125-14-214.5-103.5T122-440H42v-80h80q14-125 103.5-214.5T440-838v-80h80v80q125 14 214.5 103.5T838-520h80v80h-80q-14 125-103.5 214.5T520-122v80h-80Zm40-158q116 0 198-82t82-198q0-116-82-198t-198-82q-116 0-198 82t-82 198q0 116 82 198t198 82Zm0-120q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm0-80q33 0 56.5-23.5T560-480q0-33-23.5-56.5T480-560q-33 0-56.5 23.5T400-480q0 33 23.5 56.5T480-400Zm0-80Z"/></svg>
                     Subdomains
                 </div>
                 <div class="sidebar-subtitle" id="parentSubtitle">—</div>
@@ -1347,6 +1378,10 @@
                 </div>
             </div>
             <div class="sidebar-footer" id="parentFooter" style="display: none;">
+                <label class="parent-domain-toggle">
+                    <input type="checkbox" id="useParentDomainToggle">
+                    <span>Use Parent Domain</span>
+                </label>
                 <div class="footer-stats" id="parentStats">
                     <div class="stat-item">
                         <span>Total Subdomains:</span>
@@ -1454,6 +1489,7 @@
         let parentDomainsData = [];
         let filteredParentData = [];
         let selectedSubdomain = null;
+        let useParentDomainSelected = false;
         let parentCurrentPage = 1;
         let parentPageSize = 100;
         
@@ -1643,7 +1679,21 @@
                 return;
             }
             
-            await loadParentDomains(targetDomain, credentialOwners);
+            // If "Use Parent Domain" is selected, load both parent domains and credentials in parallel
+            if (useParentDomainSelected) {
+                // Start both API calls in parallel (don't await yet)
+                const parentDomainsPromise = loadParentDomains(targetDomain, credentialOwners, true); // true = skip auto-load credentials
+                const credentialsPromise = loadCredentials(targetDomain, credentialOwners);
+                
+                // Wait for both to complete
+                await Promise.all([parentDomainsPromise, credentialsPromise]);
+                
+                // Re-check the checkbox after both loads complete
+                document.getElementById('useParentDomainToggle').checked = true;
+            } else {
+                // Normal flow: just load parent domains
+                await loadParentDomains(targetDomain, credentialOwners);
+            }
         });
 
         // API Calls
@@ -1711,11 +1761,11 @@
                     <div class="item-domain">${escapeHtml(item.domain)}</div>
                     <div class="item-stats">
                         <span class="item-badge">
-                            <span class="material-symbols-outlined">domain</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M440-42v-80q-125-14-214.5-103.5T122-440H42v-80h80q14-125 103.5-214.5T440-838v-80h80v80q125 14 214.5 103.5T838-520h80v80h-80q-14 125-103.5 214.5T520-122v80h-80Zm40-158q116 0 198-82t82-198q0-116-82-198t-198-82q-116 0-198 82t-82 198q0 116 82 198t198 82Zm0-120q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm0-80q33 0 56.5-23.5T560-480q0-33-23.5-56.5T480-560q-33 0-56.5 23.5T400-480q0 33 23.5 56.5T480-400Zm0-80Z"/></svg>
                             <strong>${item.affected_subdomain_count || 0}</strong> subdomains
                         </span>
                         <span class="item-badge">
-                            <span class="material-symbols-outlined">shield_person</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M120-160v-112q0-34 17.5-62.5T184-378q62-31 126-46.5T440-440q20 0 40 1.5t40 4.5q-4 58 21 109.5t73 84.5v80H120ZM760-40l-60-60v-186q-44-13-72-49.5T600-420q0-58 41-99t99-41q58 0 99 41t41 99q0 45-25.5 80T790-290l50 50-60 60 60 60-80 80ZM440-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm300 80q17 0 28.5-11.5T780-440q0-17-11.5-28.5T740-480q-17 0-28.5 11.5T700-440q0 17 11.5 28.5T740-400Z"/></svg>
                             <strong>${item.credentials_count || 0}</strong> credentials
                         </span>
                     </div>
@@ -1739,10 +1789,24 @@
             selectedTargetDomain = domain;
             const owners = [credentialOwnerDomain];
             
-            await loadParentDomains(domain, owners);
+            // If "Use Parent Domain" is selected, load both parent domains and credentials in parallel
+            if (useParentDomainSelected) {
+                // Start both API calls in parallel (don't await yet)
+                const parentDomainsPromise = loadParentDomains(domain, owners, true); // true = skip auto-load credentials
+                const credentialsPromise = loadCredentials(domain, owners);
+                
+                // Wait for both to complete
+                await Promise.all([parentDomainsPromise, credentialsPromise]);
+                
+                // Re-check the checkbox after both loads complete
+                document.getElementById('useParentDomainToggle').checked = true;
+            } else {
+                // Normal flow: just load parent domains
+                await loadParentDomains(domain, owners);
+            }
         }
 
-        async function loadParentDomains(target, owners) {
+        async function loadParentDomains(target, owners, skipAutoLoadCredentials = false) {
             const list = document.getElementById('subdomainsList');
             list.innerHTML = '<div class="loading-spinner"><span class="material-symbols-outlined">progress_activity</span><div class="loading-text">Loading subdomains...</div></div>';
             
@@ -1789,6 +1853,18 @@
                     document.getElementById('parentPagination').style.display = 'none';
                 }
                 
+                // If "Use Parent Domain" was selected, keep it selected and auto-load credentials for new parent
+                // (unless we're skipping auto-load because credentials are being loaded in parallel)
+                if (!skipAutoLoadCredentials) {
+                    if (useParentDomainSelected) {
+                        document.getElementById('useParentDomainToggle').checked = true;
+                        await loadCredentials(target, owners);
+                    } else {
+                        // Only reset detail view if not using parent domain
+                        resetDetailView();
+                    }
+                }
+                
             } catch (error) {
                 console.error('Error loading parent domains:', error);
                 list.innerHTML = `<div class="empty-state"><span class="material-symbols-outlined">error</span><div class="empty-state-text">Error loading data: ${error.message}</div></div>`;
@@ -1809,7 +1885,7 @@
                     <div class="item-domain">${escapeHtml(item.domain)}</div>
                     <div class="item-stats">
                         <span class="item-badge">
-                            <span class="material-symbols-outlined">shield_person</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M120-160v-112q0-34 17.5-62.5T184-378q62-31 126-46.5T440-440q20 0 40 1.5t40 4.5q-4 58 21 109.5t73 84.5v80H120ZM760-40l-60-60v-186q-44-13-72-49.5T600-420q0-58 41-99t99-41q58 0 99 41t41 99q0 45-25.5 80T790-290l50 50-60 60 60 60-80 80ZM440-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm300 80q17 0 28.5-11.5T780-440q0-17-11.5-28.5T740-480q-17 0-28.5 11.5T700-440q0 17 11.5 28.5T740-400Z"/></svg>
                             <strong>${item.credentials_count || 0}</strong> credentials
                         </span>
                     </div>
@@ -1829,6 +1905,10 @@
             // Highlight selected
             document.querySelectorAll('.sidebar-center .sidebar-item').forEach(el => el.classList.remove('selected'));
             itemElement.classList.add('selected');
+            
+            // Uncheck "Use Parent Domain" checkbox
+            document.getElementById('useParentDomainToggle').checked = false;
+            useParentDomainSelected = false;
             
             selectedSubdomain = subdomain;
             const owners = currentMode === 'global' ? [credentialOwnerDomain] : credentialOwners;
@@ -2027,6 +2107,31 @@
             loadParentDomains(currentMode === 'global' ? selectedTargetDomain : targetDomain, owners);
         });
 
+        // Use Parent Domain Toggle
+        document.getElementById('useParentDomainToggle').addEventListener('change', async (e) => {
+            const isChecked = e.target.checked;
+            
+            if (isChecked) {
+                const parentDomain = currentMode === 'global' ? selectedTargetDomain : targetDomain;
+                if (!parentDomain) {
+                    e.target.checked = false;
+                    return;
+                }
+                
+                // Deselect all subdomain items
+                document.querySelectorAll('.sidebar-center .sidebar-item').forEach(el => el.classList.remove('selected'));
+                
+                useParentDomainSelected = true;
+                
+                const owners = currentMode === 'global' ? [credentialOwnerDomain] : credentialOwners;
+                await loadCredentials(parentDomain, owners);
+            } else {
+                // If unchecked, clear the credentials view
+                useParentDomainSelected = false;
+                resetDetailView();
+            }
+        });
+
         document.getElementById('credentialsPrevBtn').addEventListener('click', () => {
             if (credentialsCurrentPage > 1) {
                 credentialsCurrentPage--;
@@ -2194,6 +2299,8 @@
             document.getElementById('subdomainsList').innerHTML = '<div class="empty-state"><span class="material-symbols-outlined">arrow_back</span><div class="empty-state-text" id="subdomainsEmptyText"><span class="global-mode-text">Select a breached domain from the left</span><span class="search-mode-text hidden">Enter target and credential owners, then click Search</span></div></div>';
             document.getElementById('parentSubtitle').textContent = '—';
             document.getElementById('parentFooter').style.display = 'none';
+            document.getElementById('useParentDomainToggle').checked = false;
+            useParentDomainSelected = false;
             parentDomainsData = [];
             filteredParentData = [];
             selectedTargetDomain = null;
