@@ -189,6 +189,12 @@
             box-shadow: 0 0 0 2px rgba(89, 78, 243, 0.1);
         }
 
+        /* Style calendar icon for date inputs */
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            filter: invert(54%) sepia(8%) saturate(413%) hue-rotate(155deg) brightness(93%) contrast(88%);
+            cursor: pointer;
+        }
+
         .action-button {
             padding: 7px 16px;
             background: linear-gradient(135deg, #594ef3 0%, #512b70 100%);
@@ -949,7 +955,7 @@
         .credential-owners-btn svg {
             width: 18px;
             height: 18px;
-            fill: #594ef3;
+            fill: #8d9a9e;
         }
 
         .owners-modal-help {
