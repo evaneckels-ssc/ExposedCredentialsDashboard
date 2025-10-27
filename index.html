@@ -1403,8 +1403,8 @@
                             <div class="step-number">1</div>
                             <div class="step-content">
                                 <h4>Breached Domains (Left Panel)</h4>
-                                <p>Enter your organization's domain (e.g., <code>mycompany.com</code>) and click <strong>Search</strong>.</p>
-                                <p>View all external sites/domains where your credentials were leaked. Each site shows the number of affected subdomains and total exposed credentials.</p>
+                                <p>Enter the <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="16px" fill="#594ef3" style="vertical-align: middle; margin: 0 4px;"><path d="M80-120v-720h400v160h400v560H80Zm80-80h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm160 480h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm160 480h320v-400H480v80h80v80h-80v80h80v80h-80v80Zm160-240v-80h80v80h-80Zm0 160v-80h80v80h-80Z"/></svg><strong>Credential Owner Domain</strong> (the organization whose credentials you want to find, e.g., <code>mycompany.com</code>) and click <strong>Search</strong>.</p>
+                                <p>View all <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="16px" fill="#594ef3" style="vertical-align: middle; margin: 0 4px;"><path d="M440-42v-80q-125-14-214.5-103.5T122-440H42v-80h80q14-125 103.5-214.5T440-838v-80h80v80q125 14 214.5 103.5T838-520h80v80h-80q-14 125-103.5 214.5T520-122v80h-80Zm40-158q116 0 198-82t82-198q0-116-82-198t-198-82q-116 0-198 82t-82 198q0 116 82 198t198 82Zm0-120q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm0-80q33 0 56.5-23.5T560-480q0-33-23.5-56.5T480-560q-33 0-56.5 23.5T400-480q0 33 23.5 56.5T480-400Zm0-80Z"/></svg><strong>Breached Domains</strong> (external sites/services where your credentials were found). Each shows the number of affected subdomains and total exposed credentials.</p>
                             </div>
                         </div>
                         <div class="workflow-step">
@@ -1451,13 +1451,14 @@
                 <section class="help-section">
                     <h3>Example Use Case</h3>
                     <div class="example-box">
+                        <p><strong>Scenario:</strong> Discover where your organization's credentials are exposed</p>
                         <ol>
-                            <li>Enter: <code>mycompany.com</code></li>
-                            <li>See: 15 breached sites found (google.com, microsoft.com, etc.)</li>
-                            <li>Click: <code>google.com</code></li>
-                            <li>See: 8 subdomains (firebase.com, gmail.com, etc.)</li>
-                            <li>Click: <code>firebase.com</code></li>
-                            <li>See: 23 employee credentials leaked from various breaches</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" height="14px" viewBox="0 -960 960 960" width="14px" fill="#594ef3" style="vertical-align: middle; margin-right: 4px;"><path d="M80-120v-720h400v160h400v560H80Zm80-80h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm160 480h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm160 480h320v-400H480v80h80v80h-80v80h80v80h-80v80Zm160-240v-80h80v80h-80Zm0 160v-80h80v80h-80Z"/></svg>Enter Credential Owner: <code>mycompany.com</code></li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" height="14px" viewBox="0 -960 960 960" width="14px" fill="#594ef3" style="vertical-align: middle; margin-right: 4px;"><path d="M440-42v-80q-125-14-214.5-103.5T122-440H42v-80h80q14-125 103.5-214.5T440-838v-80h80v80q125 14 214.5 103.5T838-520h80v80h-80q-14 125-103.5 214.5T520-122v80h-80Zm40-158q116 0 198-82t82-198q0-116-82-198t-198-82q-116 0-198 82t-82 198q0 116 82 198t198 82Zm0-120q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm0-80q33 0 56.5-23.5T560-480q0-33-23.5-56.5T480-560q-33 0-56.5 23.5T400-480q0 33 23.5 56.5T480-400Zm0-80Z"/></svg>See: 15 Breached Domains found (google.com, facebook.com, discord.com, etc.)</li>
+                            <li>Click breached domain: <code>google.com</code></li>
+                            <li>See: 8 subdomains (gmail.com, accounts.google.com, etc.)</li>
+                            <li>Click subdomain: <code>accounts.google.com</code></li>
+                            <li>See: 23 mycompany.com credentials exposed in various breaches</li>
                             <li>Export: CSV for IT team to coordinate password resets</li>
                         </ol>
                     </div>
@@ -1501,8 +1502,8 @@
                             <div class="step-number">1</div>
                             <div class="step-content">
                                 <h4>Setup Your Search</h4>
-                                <p><strong>Target Domain:</strong> Enter the domain you want to investigate (e.g., <code>salesforce.com</code>)</p>
-                                <p><strong>Credential Owner(s):</strong> Click to add one or more domains whose credentials you want to find (e.g., <code>mycompany.com, vendor1.com, vendor2.com</code>)</p>
+                                <p><svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="16px" fill="#594ef3" style="vertical-align: middle; margin: 0 4px;"><path d="M440-42v-80q-125-14-214.5-103.5T122-440H42v-80h80q14-125 103.5-214.5T440-838v-80h80v80q125 14 214.5 103.5T838-520h80v80h-80q-14 125-103.5 214.5T520-122v80h-80Zm40-158q116 0 198-82t82-198q0-116-82-198t-198-82q-116 0-198 82t-82 198q0 116 82 198t198 82Zm0-120q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm0-80q33 0 56.5-23.5T560-480q0-33-23.5-56.5T480-560q-33 0-56.5 23.5T400-480q0 33 23.5 56.5T480-400Zm0-80Z"/></svg><strong>Target Domain:</strong> Enter the site/service you want to investigate (e.g., <code>salesforce.com</code>, <code>google.com</code>)</p>
+                                <p><svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="16px" fill="#594ef3" style="vertical-align: middle; margin: 0 4px;"><path d="M80-120v-720h400v160h400v560H80Zm80-80h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm160 480h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm160 480h320v-400H480v80h80v80h-80v80h80v80h-80v80Zm160-240v-80h80v80h-80Zm0 160v-80h80v80h-80Z"/></svg><strong>Credential Owner(s):</strong> Click to add one or more organizations whose credentials you want to find (e.g., <code>mycompany.com, vendor1.com, vendor2.com</code>)</p>
                                 <p>Click <strong>Search</strong> to run the investigation.</p>
                             </div>
                         </div>
@@ -1510,7 +1511,7 @@
                             <div class="step-number">2</div>
                             <div class="step-content">
                                 <h4>Subdomains (Left Panel)</h4>
-                                <p>View all subdomains of your target domain that contain credentials from your specified owners.</p>
+                                <p>View all subdomains of your <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="16px" fill="#594ef3" style="vertical-align: middle; margin: 0 4px;"><path d="M440-42v-80q-125-14-214.5-103.5T122-440H42v-80h80q14-125 103.5-214.5T440-838v-80h80v80q125 14 214.5 103.5T838-520h80v80h-80q-14 125-103.5 214.5T520-122v80h-80Zm40-158q116 0 198-82t82-198q0-116-82-198t-198-82q-116 0-198 82t-82 198q0 116 82 198t198 82Zm0-120q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm0-80q33 0 56.5-23.5T560-480q0-33-23.5-56.5T480-560q-33 0-56.5 23.5T400-480q0 33 23.5 56.5T480-400Zm0-80Z"/></svg><strong>Target Domain</strong> that contain credentials from your specified <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="16px" fill="#594ef3" style="vertical-align: middle; margin: 0 4px;"><path d="M80-120v-720h400v160h400v560H80Zm80-80h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm160 480h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm160 480h320v-400H480v80h80v80h-80v80h80v80h-80v80Zm160-240v-80h80v80h-80Zm0 160v-80h80v80h-80Z"/></svg><strong>Credential Owners</strong>.</p>
                                 <p>Use the <strong>"Use Parent Domain"</strong> checkbox to view credentials for the main domain itself.</p>
                             </div>
                         </div>
@@ -1552,10 +1553,10 @@
                     <div class="example-box">
                         <p><strong>Scenario:</strong> Vendor security assessment</p>
                         <ol>
-                            <li>Target: <code>salesforce.com</code></li>
-                            <li>Credential Owners: <code>mycompany.com, criticalvendor.com, vendor3.com</code></li>
-                            <li>See: 12 subdomains on salesforce.com with credentials</li>
-                            <li>Click: <code>login.salesforce.com</code></li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" height="14px" viewBox="0 -960 960 960" width="14px" fill="#594ef3" style="vertical-align: middle; margin-right: 4px;"><path d="M440-42v-80q-125-14-214.5-103.5T122-440H42v-80h80q14-125 103.5-214.5T440-838v-80h80v80q125 14 214.5 103.5T838-520h80v80h-80q-14 125-103.5 214.5T520-122v80h-80Zm40-158q116 0 198-82t82-198q0-116-82-198t-198-82q-116 0-198 82t-82 198q0 116 82 198t198 82Zm0-120q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm0-80q33 0 56.5-23.5T560-480q0-33-23.5-56.5T480-560q-33 0-56.5 23.5T400-480q0 33 23.5 56.5T480-400Zm0-80Z"/></svg>Enter Target Domain: <code>salesforce.com</code></li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" height="14px" viewBox="0 -960 960 960" width="14px" fill="#594ef3" style="vertical-align: middle; margin-right: 4px;"><path d="M80-120v-720h400v160h400v560H80Zm80-80h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm160 480h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm160 480h320v-400H480v80h80v80h-80v80h80v80h-80v80Zm160-240v-80h80v80h-80Zm0 160v-80h80v80h-80Z"/></svg>Enter Credential Owners: <code>mycompany.com, criticalvendor.com, vendor3.com</code></li>
+                            <li>See: 12 subdomains of salesforce.com with credentials from these owners</li>
+                            <li>Click subdomain: <code>login.salesforce.com</code></li>
                             <li>See: 15 credentials total (8 from mycompany.com, 5 from criticalvendor.com, 2 from vendor3.com)</li>
                             <li>Export: Evidence for vendor security review and risk scoring</li>
                         </ol>
