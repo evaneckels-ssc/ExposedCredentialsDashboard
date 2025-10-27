@@ -1276,7 +1276,7 @@
                         <label class="filter-label">Target Domain</label>
                         <div class="filter-input-wrapper">
                             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M440-42v-80q-125-14-214.5-103.5T122-440H42v-80h80q14-125 103.5-214.5T440-838v-80h80v80q125 14 214.5 103.5T838-520h80v80h-80q-14 125-103.5 214.5T520-122v80h-80Zm40-158q116 0 198-82t82-198q0-116-82-198t-198-82q-116 0-198 82t-82 198q0 116 82 198t198 82Zm0-120q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm0-80q33 0 56.5-23.5T560-480q0-33-23.5-56.5T480-560q-33 0-56.5 23.5T400-480q0 33 23.5 56.5T480-400Zm0-80Z"/></svg>
-                            <input type="text" id="targetDomainInput" placeholder="e.g., google.com">
+                            <input type="text" id="targetDomainInput" placeholder="e.g., vendor.com">
                         </div>
                     </div>
                     <div class="filter-group">
@@ -1550,6 +1550,11 @@
         function switchMode(mode) {
             currentMode = mode;
             
+            // Clear all views when switching modes FIRST
+            resetGlobalView();
+            resetParentView();
+            resetDetailView();
+            
             if (mode === 'global') {
                 document.body.classList.remove('search-mode');
                 document.body.classList.add('global-mode');
@@ -1557,8 +1562,12 @@
                 document.getElementById('searchModeBtn').classList.remove('active');
                 document.getElementById('globalFilters').classList.remove('hidden');
                 document.getElementById('searchFilters').classList.add('hidden');
-                document.querySelector('.global-mode-text').classList.remove('hidden');
-                document.querySelector('.search-mode-text').classList.add('hidden');
+                
+                // Toggle visibility for mode-specific text
+                const globalTexts = document.querySelectorAll('.global-mode-text');
+                const searchTexts = document.querySelectorAll('.search-mode-text');
+                globalTexts.forEach(el => el.classList.remove('hidden'));
+                searchTexts.forEach(el => el.classList.add('hidden'));
             } else {
                 document.body.classList.remove('global-mode');
                 document.body.classList.add('search-mode');
@@ -1566,13 +1575,26 @@
                 document.getElementById('globalModeBtn').classList.remove('active');
                 document.getElementById('globalFilters').classList.add('hidden');
                 document.getElementById('searchFilters').classList.remove('hidden');
-                document.querySelector('.global-mode-text').classList.add('hidden');
-                document.querySelector('.search-mode-text').classList.remove('hidden');
+                
+                // Toggle visibility for mode-specific text
+                const globalTexts = document.querySelectorAll('.global-mode-text');
+                const searchTexts = document.querySelectorAll('.search-mode-text');
+                globalTexts.forEach(el => el.classList.add('hidden'));
+                searchTexts.forEach(el => el.classList.remove('hidden'));
             }
-            
-            // Reset views
-            resetParentView();
-            resetDetailView();
+        }
+        
+        function resetGlobalView() {
+            document.getElementById('breachedSitesList').innerHTML = '<div class="empty-state"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M80-120v-720h400v160h400v560H80Zm80-80h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm160 480h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm0-160h80v-80h-80v80Zm160 480h320v-400H480v80h80v80h-80v80h80v80h-80v80Zm160-240v-80h80v80h-80Zm0 160v-80h80v80h-80Z"/></svg><div class="empty-state-text">Enter a credential owner domain and click Load to see breached domains</div></div>';
+            document.getElementById('globalSubtitle').textContent = '—';
+            document.getElementById('globalFooter').style.display = 'none';
+            document.getElementById('breachedSitesSearch').value = '';
+            document.getElementById('totalSites').textContent = '—';
+            document.getElementById('totalGlobalCredentials').textContent = '—';
+            globalSummaryData = [];
+            filteredGlobalData = [];
+            selectedTargetDomain = null;
+            globalCurrentPage = 1;
         }
 
         // Global View: Load Button
@@ -2299,6 +2321,8 @@
             document.getElementById('subdomainsList').innerHTML = '<div class="empty-state"><span class="material-symbols-outlined">arrow_back</span><div class="empty-state-text" id="subdomainsEmptyText"><span class="global-mode-text">Select a breached domain from the left</span><span class="search-mode-text hidden">Enter target and credential owners, then click Search</span></div></div>';
             document.getElementById('parentSubtitle').textContent = '—';
             document.getElementById('parentFooter').style.display = 'none';
+            document.getElementById('subdomainsSearch').value = '';
+            document.getElementById('totalSubdomains').textContent = '—';
             document.getElementById('useParentDomainToggle').checked = false;
             useParentDomainSelected = false;
             parentDomainsData = [];
@@ -2311,6 +2335,8 @@
             document.getElementById('detailContent').innerHTML = '<div class="empty-state"><span class="material-symbols-outlined">arrow_back</span><div class="empty-state-text">Select a subdomain to view credentials</div></div>';
             document.getElementById('detailSubtitle').textContent = '—';
             document.getElementById('credentialFooter').style.display = 'none';
+            document.getElementById('credentialsSearch').value = '';
+            document.getElementById('totalCredentials').textContent = '—';
             credentialsData = [];
             filteredCredentialsData = [];
             selectedSubdomain = null;
