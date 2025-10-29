@@ -2008,6 +2008,10 @@
                 return;
             }
             
+            // Clear subdomains and credentials panes before new search
+            resetParentView();
+            resetDetailView();
+            
             await loadGlobalSummary();
         });
 
@@ -2113,6 +2117,10 @@
                 document.getElementById('apiKeyModal').style.display = 'flex';
                 return;
             }
+            
+            // Clear subdomains and credentials panes before new search
+            resetParentView();
+            resetDetailView();
             
             // If "Use Parent Domain" is selected, load both parent domains and credentials in parallel
             if (useParentDomainSelected) {
