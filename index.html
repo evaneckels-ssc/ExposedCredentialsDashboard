@@ -672,6 +672,11 @@
             margin-bottom: 16px;
         }
 
+        /* Rotate subdomain arrow to point up in search mode */
+        .search-mode .subdomain-arrow {
+            transform: rotate(90deg);
+        }
+
         .empty-state-text {
             font-size: 14px;
             font-style: italic;
@@ -1764,10 +1769,10 @@
             </div>
             <div class="sidebar-content" id="subdomainsList">
                 <div class="empty-state">
-                    <span class="material-symbols-outlined">arrow_back</span>
+                    <span class="material-symbols-outlined subdomain-arrow">arrow_back</span>
                     <div class="empty-state-text" id="subdomainsEmptyText">
                         <span class="global-mode-text">Select a breached domain from the left</span>
-                        <span class="search-mode-text hidden">Enter target and credential owners, then click Search</span>
+                        <span class="search-mode-text hidden">Enter target and credential owner(s) in top section, then click Search</span>
                     </div>
                 </div>
             </div>
@@ -2739,7 +2744,7 @@
         }
 
         function resetParentView() {
-            document.getElementById('subdomainsList').innerHTML = '<div class="empty-state"><span class="material-symbols-outlined">arrow_back</span><div class="empty-state-text" id="subdomainsEmptyText"><span class="global-mode-text">Select a breached domain from the left</span><span class="search-mode-text hidden">Enter target and credential owners, then click Search</span></div></div>';
+            document.getElementById('subdomainsList').innerHTML = '<div class="empty-state"><span class="material-symbols-outlined subdomain-arrow">arrow_back</span><div class="empty-state-text" id="subdomainsEmptyText"><span class="global-mode-text">Select a breached domain from the left</span><span class="search-mode-text hidden">Enter target and credential owner(s) in top section, then click Search</span></div></div>';
             document.getElementById('parentSubtitle').textContent = '—';
             document.getElementById('parentFooter').style.display = 'none';
             document.getElementById('subdomainsSearch').value = '';
@@ -3146,7 +3151,7 @@
         }
 
         function resetParentView() {
-            document.getElementById('subdomainsList').innerHTML = '<div class="empty-state"><span class="material-symbols-outlined">arrow_back</span><div class="empty-state-text" id="subdomainsEmptyText"><span class="global-mode-text">Select a breached domain from the left</span><span class="search-mode-text hidden">Enter target and credential owners, then click Search</span></div></div>';
+            document.getElementById('subdomainsList').innerHTML = '<div class="empty-state"><span class="material-symbols-outlined subdomain-arrow">arrow_back</span><div class="empty-state-text" id="subdomainsEmptyText"><span class="global-mode-text">Select a breached domain from the left</span><span class="search-mode-text hidden">Enter target and credential owner(s) in top section, then click Search</span></div></div>';
             document.getElementById('parentSubtitle').textContent = '—';
             document.getElementById('parentFooter').style.display = 'none';
             document.getElementById('subdomainsSearch').value = '';
